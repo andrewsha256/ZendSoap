@@ -1,0 +1,15 @@
+{
+	"name": "andrewsha256-github-io/zend-soap",
+	"description": "SOAP service hub for Zend. Boilerplate for making SOAP services.",
+	"require": {
+		"php": ">=5.5.0",
+		"zendframework/zend-servicemanager": "^3.3",
+		"zendframework/zend-mvc": "^3.0.1",
+		"zendframework/zend-soap": "^2.6"
+	},
+	"autoload": {
+		"psr-4": {
+			"Andrewsha256\\ZendSoap\\": "src"
+		}
+	}
+}

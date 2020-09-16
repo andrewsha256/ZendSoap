@@ -1,0 +1,22 @@
+<?php
+/**
+ * Template for service description
+ */
+
+/** @var \Andrewsha256\ZendSoap\ServiceInterface */
+$service;
+?>
+<!doctype html>
+<html>
+<head>
+<title>SOAP Service Hub | <?=$this->escapeHtml($service->getTitle())?></title>
+</head><body>
+	<h1><?=$this->escapeHtml($service->getTitle())?></h1>
+	<p><a href="?wsdl">WSDL</a></p>
+	<div style="position:relative; width:90%; height:300px; overflow: auto; border: solid 1px #ccc;">
+		<pre><?=$this->escapeHtml($service->getWsdl())?></pre>
+	</div>
+	<br><br>
+	<pre><?=$this->escapeHtml($service->getDescription())?></pre>
+</body>
+</html>
