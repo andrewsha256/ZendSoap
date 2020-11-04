@@ -11,11 +11,11 @@ use \Andrewsha256\ZendSoap\ServiceInterface;
  * Root / route controller for all services
  *
  * One point for all client requests. Parses request, searches for requested
- * SOAP service, call it, handles response (and errors) and sends response to
+ * SOAP service, calls it, handles response (and errors) and sends response to
  * client.
  *
- * Handles POST query as SOAP call, and GET query as description request. If GET
- * request has parameter `?wsdl` returns service's WSDL.
+ * Handles POST query as SOAP call, and GET query as request for description.
+ * If GET request has parameter `?wsdl` then method returns service's WSDL.
  *
  * @see https://framework.zend.com/blog/2017-01-24-zend-soap-server.html
  */
@@ -113,7 +113,7 @@ class IndexController extends AbstractActionController
 	/**
 	 * Makes SOAP-call
 	 *
-	 * This methods wraps SOAP call and handles errors. This methods solves
+	 * This method wraps SOAP call and handles errors. Also it solves
 	 * some strange issues with missed `ob_end_clean()` call.
 	 * http://stackoverflow.com/questions/29259305/soapserver-handle-ignoring-output-buffering
 	 * 
